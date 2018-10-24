@@ -1,7 +1,6 @@
 #!/usr/bin/bash
-mkdir excersize
-cd excersize
 
+mkdir explanation
 mkdir reset_hard_1
 mkdir reset_hard_2
 mkdir commit_amend
@@ -18,9 +17,24 @@ initial_commit() {
   git add -A;
   git commit -m $(basename `pwd`)
 }
+
 echo "make all dir"
+
+# explanation
+cd explanation
+git init
+mkdir dir1
+echo "html" >> dir1/index.html
+git add -A; git commit -m "v1 add1/index.html"
+mkdir dir2
+echo "html" >> dir2/index.html
+git add -A; git commit -m "v2 add2/index.html"
+echo "html" >> git.html
+git add -A; git commit -m "v3 add3/index.html"
+
+
 #①
-cd reset_hard_1
+cd ../reset_hard_1
 initial_commit
 touch fruites.html
 echo "organe" >> fruites.html
