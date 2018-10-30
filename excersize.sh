@@ -131,6 +131,9 @@ echo "incorrect commitだよ" >> index.html
 git add -A; git commit -m "make develop3";
 git checkout master
 git checkout -b another-develop
+touch index.html
+git add -A; git commit -m "make index.html";
+
 
 echo "make7"
 #⑧
