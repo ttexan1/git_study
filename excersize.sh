@@ -25,12 +25,12 @@ cd explanation
 git init
 mkdir dir1
 echo "html" >> dir1/index.html
-git add -A; git commit -m "v1 add1/index.html"
+git add -A; git commit -m "v1 add dir1/index.html"
 mkdir dir2
 echo "html" >> dir2/index.html
-git add -A; git commit -m "v2 add2/index.html"
+git add -A; git commit -m "v2 add dir2/index.html"
 echo "html" >> git.html
-git add -A; git commit -m "v3 add3/index.html"
+git add -A; git commit -m "v3 add index.html"
 
 
 #①

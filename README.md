@@ -13,5 +13,6 @@ hub clone ttexan1/git_study
 
 * execute the shell script
 ```
+rm -rf .git
 bash ./excersize.sh
 ```
