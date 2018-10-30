@@ -23,7 +23,7 @@ git checkout -b america
 
 echo "Florida" >> america.txt; git add -A; git commit -m "add Florida"
 echo "Bigban" >> america.txt; git stash;
-echo "London" >> america.txt; git add -A; git commit -m "add London"
+echo "London" >> british.txt; git add -A; git commit -m "add London"
 echo "残念！このStashは引っ掛けだよ！" >> america.txt; git stash save "ヒント：git show stash{0}で中を確認して見よう";
 git checkout -b _america_
 echo "Louisiana" >> america.txt; git add -A; git commit -m "add Louisiana"
