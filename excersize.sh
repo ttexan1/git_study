@@ -142,39 +142,38 @@ initial_commit
 git checkout develop
 touch index.html
 
-echo "コミット1" >> index.html
+echo "コミット1" >> tanaka.html
 git add -A; git commit -m "田中さんの依頼";
-echo "コミット2" >> index.html
+echo "コミット2" >> sato.html
 git add -A; git commit -m "佐藤さんの依頼";
-echo "コミット3" >> index.html
+echo "コミット3" >> suzuki.html
 git add -A; git commit -m "鈴木さんの依頼";
-echo "コミット4" >> index.html
+echo "コミット4" >> tanaka.html
 git add -A; git commit -m "田中さんの依頼";
-echo "コミット5" >> index.html
+echo "コミット5" >> sato.html
 git add -A; git commit -m "佐藤さんの依頼";
-echo "コミット6" >> index.html
-
+echo "コミット6" >> suzuki.html
 git add -A; git commit -m "鈴木さんの依頼";
-# 変更の可能性あり(コンフリクトどうだろうかわからない)
 
 echo "make8"
 #⑨
 cd ../secret_key
 initial_commit
 mkdir config
-touch config/secrets.yml
-touch config/settings.rb
-touch fruites.html
+touch config/secrets.yml config/settings.rb
 touch .gitignore
 
-echo "git使える様になったよ" >> fruites.html
-git add -A; git commit -m "make fruites.html"
-echo "キー: 1234" > config/auth_key
-git add -A; git commit -m "make change"
+echo "git使える様になったよ" >> index.html
+git add -A; git commit -m "make index.html"
+echo "キー: 1234" > config/secrets.yml
+git add -A; git commit -m "change key"
 echo "オレンジ" > fruites.html
 git add -A; git commit -m "add orange";
-echo "キー: abcd" > config/auth_key
-git add -A; git commit -m "make change"
+echo "キー: abcd" > config/secrets.yml
+git add -A; git commit -m "change key"
 echo "アップル" > fruites.html
 git add -A; git commit -m "add apple"
+echo "key: a1b2c3d4" > config/secrets.yml
+git add -A; git commit -m "change key"
+
 echo "finish"
