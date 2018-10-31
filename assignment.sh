@@ -6,15 +6,16 @@ git init; mkdir secrets; touch secrets/country_key.json; touch .gitignore;
 git add -A; git commit -m "initial commit";
 
 git checkout -b japan
-echo "japan:key" >> secrets/country_key.json;
-echo "Hiroshima" >> japan.txt; git add -A; git commit -m "add Hiroshima"
+echo "japan:key" >> secrets/country_key.json; touch japan.txt;
+git add -A; git commit -m "make japan branch"
 echo "Kyoto" >> japan.txt; git add -A; git commit -m "add Kyoto"
 
 echo "Aomori" >> japan.txt; git add -A
 git reset --hard HEAD@{1}
 
-echo "Tokyo" >> japan.txt; git add -A; git commit -m "add Tokyo"
+echo "Hiroshima" >> japan.txt; git add -A; git commit -m "add Hiroshima"
 echo "Hokkaido" >> japan.txt; git add -A; git commit -m "add Hokkaido"
+echo "Tokyo" >> japan.txt; git add -A; git commit -m "add Tokyo"
 
 
 git checkout master
@@ -54,6 +55,6 @@ git branch -D france
 
 git checkout -b british
 
-echo "Scotland Edinburgh" >> british.txt; git add -A; git commit -m "add Scotland Edinburgh"
 echo "Northern Ireland Belfast" >> british.txt; git add -A; git commit -m "add Northern Ireland Belfast"
+echo "Scotland Edinburgh" >> british.txt; git add -A; git commit -m "add Scotland Edinburgh"
 echo "Wales Cardiff" >> british.txt; git add -A; git commit -m "add Wales Cardiff"
